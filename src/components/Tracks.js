@@ -3,6 +3,20 @@ import React, { Component } from "react";
 
 import './Tracks.css';
 class Tracks extends Component {
+    state = {
+        tracks: []
+    }
+
+    componentDidMount() {
+        this.getTracks()
+    }
+
+    getTracks = () =>{
+        fetch('http://localhost:3000/tracks')
+            .then(data => data.json())
+            .then(json => this.setState({tracks:json}))
+        .catch(error => console.error(error))
+    }
   render() {
     return (
         <div class="row text-center">
