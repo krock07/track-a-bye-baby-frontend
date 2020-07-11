@@ -6,21 +6,21 @@ import Nav from './components/Nav'
 
 import Users from './components/Users';
 import Header from './components/Header'
-import Logo from './components/Logo/Logo'
+import Navbar from './components/Navbar'
+import Tracks from './components/Tracks'
 
 class App extends Component {
+
+      
   
   render() {
     return (
-      <div className="App">
-        <Logo />
+      <div>
+        <Navbar />
         <Nav />
         <Header />
         <Users />
-        <header className="App-header">
-          
-          
-        </header>
+        
       </div>
     );
   }
